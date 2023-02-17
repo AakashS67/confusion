@@ -9,7 +9,7 @@ render() {
       <Main  />
     </div>
 
-  )
+  );
 
 }
 }
