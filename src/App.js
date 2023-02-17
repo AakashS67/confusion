@@ -9,7 +9,7 @@ render() {
     <div className="App">
       <Main  />
     </div>
-    </BrowserRouter>
+    </BrowserRouter> 
   );
 
 }
