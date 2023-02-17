@@ -13,7 +13,7 @@ import { Card, CardImg, CardBody,  CardTitle } from 'reactstrap';
             {comments.map((comment) => {
               return (
                 <li key={comment.id}>
-                  <p>{comments.comment}</p>
+                  <p>{comment.comment}</p>
                   <p>
                    {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit' }).format(new Date(Date.parse(comment.date)))}
                   </p>
@@ -50,22 +50,20 @@ import { Card, CardImg, CardBody,  CardTitle } from 'reactstrap';
         }  
 
 
-        render(){
-          if (this.props.selectedDish == null) {
-            return (<div></div>);
-        }
- 
-
+       const DishDetail = (props)=> {
+          if (props.dish != null) {
             return(
-                  <div className="row">
-                      {this.renderDish(this.props.selectedDish)}
-                      {this.renderComments(this.props.selectedDish.comments)}
-                    </div>
+              <div className="row">
+                  <RenderDish dish={props.dish}/>
+                  <RenderComments comments= {props.dish.comments}/>
+                </div>
+               )
            
-
-
-            )
-
         }
+        else
+        return (<div></div>);
+         
+            }
+    
 
-export default DishdetailComponent;
+export default DishDetail;
