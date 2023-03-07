@@ -1,7 +1,7 @@
-import React, { useState, Component } from "react";
+import React, { Component } from "react";
 import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from "react-router-dom";
-import { Jumbotron, Row, Col, Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Button, Label, Modal, ModalHeader, ModalBody, FormGroup, Form, Input } from 'reactstrap';
+import { Row, Col, Button, Label, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import { Control, LocalForm, Errors } from "react-redux-form";
 
 const required = (val) => val && val.length;
